@@ -2,14 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "cpu hal",
-    "build": {
-        "dockerfile": "Dockerfile" // use local docker file
-    },
- 
-   // use a shorter path ("/workspace") for folder in the container.
-    // This has to be cut of as prefix in semihosting file operations
-    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-    "workspaceFolder": "/workspace",
+    "image":"ashling/riscfree-altera:25.1"
  
     // Configure tool-specific properties.
     // Set *default* container specific settings.json values on container create.
