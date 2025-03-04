@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "cpu hal",
-    "image":"ashling/riscfree-altera:25.1"
+    "image":"ashling/riscfree-altera:25.1",
  
     // Configure tool-specific properties.
     // Set *default* container specific settings.json values on container create.
