@@ -4,6 +4,6 @@
 # This script is for NetExtender-linux-amd64-10.3.0-21.deb
 mkdir /netextender
 cd /netextender
-wget https://software.sonicwall.com/NetExtender/NetExtender-linux-amd64-10.3.0-21.deb --no-check-certificate
+wget https://software.sonicwall.com/NetExtender/NetExtender-linux-amd64-10.3.0-21.deb
 dpkg -i ./NetExtender-linux-amd64-10.3.0-21.deb
 rm ./NetExtender-linux-amd64-10.3.0-21.deb
