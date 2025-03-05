@@ -10,13 +10,9 @@
     // "workspaceFolder": "/workspace",
     // Set QUARTUS_ROOTDIR environment variable as /opt, the docker environment has both qprogrammer and riscfree inside /opt
     "remoteEnv": {
-        "QUARTUS_ROOTDIR": "/opt",
+        "QUARTUS_ROOTDIR": "/opt/qprogrammer",
          "PATH": "${env:PATH}:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
     },
-
-    // Add this line to ensure the environment variable is set in all shells
-    "postCreateCommand": "echo 'export QUARTUS_ROOTDIR=/opt' >> ~/.bashrc && source ~/.bashrc",
-    // ...existing code...
 
     // Configure tool-specific properties.
     // Set *default* container specific settings.json values on container create.
@@ -33,10 +29,6 @@
             ]
         }
     },
-    "settings": {
-        "ashling.vscode-altera-fpgas.ashling.installationPath": "/opt/riscfree"
-    },
-
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     "remoteUser": "root"
     //"remoteUser": "vscode"
