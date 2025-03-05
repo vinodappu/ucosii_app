@@ -14,6 +14,9 @@
          "PATH": "${env:PATH}:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
     },
 
+// Install Netextender client for VPN connection
+    "postCreateCommand": "chmod +x .devcontainer/netextendersetup.sh && .devcontainer/netextendersetup.sh",
+	
     // Configure tool-specific properties.
     // Set *default* container specific settings.json values on container create.
     "customizations": {
