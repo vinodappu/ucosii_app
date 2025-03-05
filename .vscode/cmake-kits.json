@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Ashling RISC-V GNU GCC toolchain",
+    "compilers": {
+      "C": "/opt/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc",
+      "CXX": "/opt/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-g++",
+      "ASM": "/opt/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc"
+    },
+    "environmentVariables": {
+      "PATH": "/opt/niosv/bin:/opt/riscfree/toolchain/riscv32-unknown-elf/bin:/opt/riscfree/build_tools/bin:/opt/riscfree/build_tools/cmake/bin:${env:PATH}"
+    },
+    "preferredGenerator": {
+      "name": "Unix Makefiles"
+    }
+  }
+]

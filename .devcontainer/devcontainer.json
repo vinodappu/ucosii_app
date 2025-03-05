@@ -4,6 +4,11 @@
     "name": "cpu hal",
     "image":"ashling/riscfree-altera:25.1",
  
+    // Set QUARTUS_ROOTDIR environment variable as /opt, the docker environment has both qprogrammer and riscfree inside /opt
+    "remoteEnv": {
+        "QUARTUS_ROOTDIR": "/opt"
+    },
+	
     // Configure tool-specific properties.
     // Set *default* container specific settings.json values on container create.
     "customizations": {
