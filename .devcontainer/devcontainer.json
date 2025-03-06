@@ -12,7 +12,7 @@
     //This could be removed since the container itself doing this
     "remoteEnv": {
         "QUARTUS_ROOTDIR": "/opt/qprogrammer",
-         "PATH": "${env:PATH}:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
+         "PATH": "${env:PATH}:/opt/qprogrammer/quartus/bin:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
     },
 
 // Install Netextender client for VPN connection - Not working, hence commented
