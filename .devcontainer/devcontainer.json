@@ -2,13 +2,14 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "cpu hal",
-    "image":"ashling/riscfree-altera:25.2",
+    "image":"ashling/riscfree-altera:25.3",
  
     // use a shorter path ("/workspace") for folder in the container.
     // This has to be cut of as prefix in semihosting file operations
     // "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
     // "workspaceFolder": "/workspace",
     // Set QUARTUS_ROOTDIR environment variable as /opt, the docker environment has both qprogrammer and riscfree inside /opt
+    //This could be removed since the container itself doing this
     "remoteEnv": {
         "QUARTUS_ROOTDIR": "/opt/qprogrammer",
          "PATH": "${env:PATH}:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
