@@ -11,7 +11,7 @@
     // "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
     // "workspaceFolder": "/workspace",
     // Set QUARTUS_ROOTDIR environment variable as /opt, the docker environment has both qprogrammer and riscfree inside /opt
-    //This could be removed since the container itself doing this
+    //Not needed if we are using in Docker desktop
      "remoteEnv": {
         "QUARTUS_ROOTDIR": "/opt/qprogrammer",
          "PATH": "${env:PATH}:/opt/qprogrammer/quartus/bin:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
