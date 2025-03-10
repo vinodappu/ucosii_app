@@ -2,7 +2,9 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "ucosii_app",
-    "image":"ashling/riscfree-altera:25.3",
+    "image":"ashling/riscfree-altera:25.3", // base image used is https://hub.docker.com/r/microsoft/devcontainers-universal
+     //Use 25.1 image for Docker desktop, where mostly you don't need a vpn connection the base image used is https://hub.docker.com/_/eclipse-temurin
+    // "image":"ashling/riscfree-altera:25.1",
  
     // use a shorter path ("/workspace") for folder in the container.
     // This has to be cut of as prefix in semihosting file operations
