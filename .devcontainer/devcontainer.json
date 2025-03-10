@@ -18,6 +18,7 @@
      },
 
 // Install Netextender client for VPN connection - Not working, hence commented
+//Not neededd docker desktop
   "postCreateCommand": "chmod +x .devcontainer/netextendersetup.sh && .devcontainer/netextendersetup.sh",
 	
     // Configure tool-specific properties.
