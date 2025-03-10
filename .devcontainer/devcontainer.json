@@ -10,10 +10,10 @@
     // "workspaceFolder": "/workspace",
     // Set QUARTUS_ROOTDIR environment variable as /opt, the docker environment has both qprogrammer and riscfree inside /opt
     //This could be removed since the container itself doing this
-    // "remoteEnv": {
-     //    "QUARTUS_ROOTDIR": "/opt/qprogrammer",
-     //     "PATH": "${env:PATH}:/opt/qprogrammer/quartus/bin:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
-    // },
+     "remoteEnv": {
+        "QUARTUS_ROOTDIR": "/opt/qprogrammer",
+         "PATH": "${env:PATH}:/opt/qprogrammer/quartus/bin:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
+     },
 
 // Install Netextender client for VPN connection - Not working, hence commented
   "postCreateCommand": "chmod +x .devcontainer/netextendersetup.sh && .devcontainer/netextendersetup.sh",
