@@ -2,30 +2,14 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
     "name": "ucosii_app",
-    "image":"ashling/riscfree-altera:25.3", // base image used is https://hub.docker.com/r/microsoft/devcontainers-universal
-     //Use 25.1 image for Docker desktop, where mostly you don't need a vpn connection the base image used is https://hub.docker.com/_/eclipse-temurin
-    // "image":"ashling/riscfree-altera:25.1",
- 
-    // use a shorter path ("/workspace") for folder in the container.
-    // This has to be cut of as prefix in semihosting file operations
-    // "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-    // "workspaceFolder": "/workspace",
-    // Set QUARTUS_ROOTDIR environment variable as /opt, the docker environment has both qprogrammer and riscfree inside /opt
-    //Not needed if we are using in Docker desktop
-     "remoteEnv": {
+    "image": "ashling/riscfree-altera:25.3",
+    "remoteEnv": {
         "QUARTUS_ROOTDIR": "/opt/qprogrammer",
-         "PATH": "${env:PATH}:/opt/qprogrammer/quartus/bin:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
-     },
-
-// Install Netextender client for VPN connection - Not working, hence commented
-//Not neededd docker desktop
-  "postCreateCommand": "chmod +x .devcontainer/netextendersetup.sh && .devcontainer/netextendersetup.sh",
-	
-    // Configure tool-specific properties.
-    // Set *default* container specific settings.json values on container create.
+        "PATH": "${env:PATH}:/opt/qprogrammer/quartus/bin:/opt/riscfree/build_tools/cmake/bin:/opt/riscfree/build_tools/bin"
+    },
+    "postCreateCommand": "chmod +x .devcontainer/netextendersetup.sh && .devcontainer/netextendersetup.sh",
     "customizations": {
         "vscode": {
-            // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
                 "ms-vscode.cpptools",
                 "ms-vscode.cmake-tools",
@@ -35,8 +19,5 @@
                 "Ashling.vscode-altera-fpgas"
             ]
         }
-    },
-    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    //"remoteUser": "root"
-    //"remoteUser": "vscode"
+    }
 }
